@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "complited": {
+      "type": "boolean",
+      "default": false
+    },
+    "totalCost": {
+      "type": "decimal"
+    },
+    "chatId": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "picUrl": {
+      "type": "text"
+    },
+    "undercategory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::undercategory.undercategory",
+      "inversedBy": "products"
+    }
+  }
+}
