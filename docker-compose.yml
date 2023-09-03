@@ -11,6 +11,18 @@ services:
     build: ./admin-bot
     restart: unless-stopped
     networks:
+      - catalog 
+  tg1-bot:
+    container_name: tg1_bot
+    build: ./tgbot1
+    restart: unless-stopped
+    networks:
+      - catalog
+  tg2-bot:
+    container_name: tg2_bot
+    build: ./tgbot2
+    restart: unless-stopped
+    networks:
       - catalog    
   strapi:
     container_name: catalog_strapi
