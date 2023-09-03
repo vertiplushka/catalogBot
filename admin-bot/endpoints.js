@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:1337/api/'
+const apiUrl = 'http://strapi:1337'
 
 const undercategoriesUrl = 'undercategories/'
 const productsUrl = 'products/'
