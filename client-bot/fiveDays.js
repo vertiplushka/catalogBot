@@ -4,7 +4,7 @@ const { getStateValue, hasPassedFiveDays } = require("./state");
 async function sendMessageToUser(username) {
     const chatId = getStateValue(username, 'chatId')
     const cart = getStateValue(username, 'cart')
-    if (cart === {}) {
+    if (cart.length === 0) {
         await bot.sendMessage(chatId, 'Похоже, что ваша корзина пуста. Самое время добавить пару товаров в вашу корзину', {
             reply_markup: {
                 inline_keyboard:[ [{text: 'Начать покупки', callback_data: 'goToUndergategory:default:'}]]
